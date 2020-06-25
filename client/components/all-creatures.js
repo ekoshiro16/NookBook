@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchProducts} from '../store/product'
 
 export class AllCreatures extends React.Component {
   componentDidMount() {
@@ -8,51 +7,56 @@ export class AllCreatures extends React.Component {
   }
 
   render() {
-    // const products = this.props.products;
-    // return (
-    //   <div className="container">
-    //   <div className="row">
-    //     <p className="flow-text">Look at all this in-game awesomeness you could own!</p>
-    //     <div id="all-products-view">
-    //       {products && products.length > 0
-    //         ? products.map((product) => {
-    //             return (
-    //               <div className="col s3" key={product.id}>
-    //                 <div className="card hoverable">
-    //                 <div className="card-image">
-    //                 <a href={`/products/${product.id}`}><img src={product.imageURL} className="responsive-img" height="50%" /></a>
-    //       <a className="btn-floating pulse halfway-fab waves-effect waves-light"><i className="material-icons">add_shopping_cart</i></a>
-    //       </div>
-    //       <div className="card-content">
-    //       <span className="card-title">{product.name}</span>
-    //       <p>Price: {product.price}</p>
-    //       <p>{`${product.description.slice(0, 28)}...`}</p>
-    //     </div>
-    //     <div className="card-action">
-    //             <a href={`/products/${product.id}`}>{`LEARN MORE ABOUT ${product.name}`}</a>
-    //     </div>
-    //                 </div>
-    //               </div>
-    //             );
-    //           })
-    //         : 'LOADING...'}
-    //     </div>
-    //   </div>
-    //   </div>
-    // );
+    return (
+      <div className="container">
+        <div className="row">
+          <p className="flow-text">
+            Look up creature data based on type below!
+          </p>
+        </div>
+
+        {/* Fish View */}
+        <div className="fishView">
+          <div className="fishTitle">
+            <a href="/creatures/fish">All Fish</a>
+          </div>
+          <a href="/creatures/fish">
+            <img
+              src="https://dodo.ac/np/images/4/4b/Black_Bass_NH.png"
+              className="responsive-img"
+              height="50%"
+            />
+          </a>
+        </div>
+
+        {/* Bug View */}
+        <div className="bugView">
+          <div className="bugTitle">
+            <a href="/creatures/bugs">All Bugs</a>
+          </div>
+          <a href="/creatures/bugs">
+            <img
+              src="https://dodo.ac/np/images/thumb/f/f1/Emperor_Butterfly_NH.png/180px-Emperor_Butterfly_NH.png"
+              className="responsive-img"
+              height="50%"
+            />
+          </a>
+        </div>
+      </div>
+    )
   }
 }
 
 const mapState = state => {
   return {
-    products: state.productReducer.allProducts
+    products: state.productReducer.AllCreatures
   }
 }
 
 const mapDispatch = dispatch => {
   return {
-    getProducts: () => dispatch(fetchProducts())
+    getCreatures: () => dispatch(fetchCreatures())
   }
 }
 
-export default connect(mapState, mapDispatch)(AllProducts)
+export default connect(mapState, mapDispatch)(AllCreatures)

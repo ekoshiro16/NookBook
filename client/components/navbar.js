@@ -6,25 +6,68 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <h1>BOILERMAKER</h1>
-    <nav>
-      {isLoggedIn ? (
-        <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
-        </div>
-      ) : (
-        <div>
-          {/* The navbar will show these links before you log in */}
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </div>
-      )}
-    </nav>
-    <hr />
+    {isLoggedIn ? (
+      <div className="navbar-fixed">
+        {/* The navbar will show these links after you log in */}
+        <nav>
+          <div className="nav-wrapper">
+            <a href="/home" className="brand-logo center">
+              🌱 NookBook 🌱
+            </a>
+            <ul className="left hide-on-med-and-down">
+              <li>
+                <a href="/creatures">🛍 Creatures</a>
+              </li>
+              <li>
+                <a href="/exclusive">✨Premium Members</a>
+              </li>
+              <li>
+                <a href="/about">📙 About Us</a>
+              </li>
+            </ul>
+            <ul className="right hide-on-med-and-down">
+              <li>
+                <a href="/home">
+                  <i className="material-icons">account_circle</i>
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={handleClick}>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    ) : (
+      <div className="navbar-fixed">
+        {/* The navbar will show these links before you log in */}
+        <nav>
+          <div className="nav-wrapper">
+            <a href="/home" className="brand-logo center">
+              🌱 NookBook 🌱
+            </a>
+            <ul className="left hide-on-med-and-down">
+              <li>
+                <a href="/creatures">🛍Creatures</a>
+              </li>
+              <li>
+                <a href="/about">📙 About Us</a>
+              </li>
+            </ul>
+            <ul className="right hide-on-med-and-down">
+              <li>
+                <a href="/login">🔑 Login</a>
+              </li>
+              <li>
+                <a href="/signup">👋 Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    )}
   </div>
 )
 

@@ -9,7 +9,6 @@ export class AllBugs extends React.Component {
 
   render() {
     console.log('props', this.props)
-    console.log('this', this)
     return (
       <div className="container">
         <div className="row">

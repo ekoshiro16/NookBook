@@ -26,8 +26,8 @@ export const gotSingleBug = bug => ({
 // [ ] To-do, trycatch all thunks
 export const fetchBugs = () => async dispatch => {
   try {
-    const {data} = await axios.get('http://acnhapi.com/v1/fish')
-    dispatach(gotAllBugs(data))
+    const {data} = await axios.get('https://acnhapi.com/v1/bugs')
+    dispatch(gotAllBugs(data))
     // const {data} = await axios.get('/api/products')
     // dispatch(gotAllProducts(data))
   } catch (error) {

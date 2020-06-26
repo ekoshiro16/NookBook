@@ -1,9 +1,11 @@
 import history from '../history'
 import axios from 'axios'
+import {runInNewContext} from 'vm'
 
 // ACTION CREATORS
 const GOT_ALL_BUGS = 'GOT_ALL_BUGS'
 const GOT_SINGLE_BUG = 'GOT_SINGLE_BUG'
+const GOT_ICONS = 'GOT_ICONS'
 
 const initialState = {
   allBugs: [],
@@ -28,8 +30,6 @@ export const fetchBugs = () => async dispatch => {
   try {
     const {data} = await axios.get('https://acnhapi.com/v1/bugs')
     dispatch(gotAllBugs(data))
-    // const {data} = await axios.get('/api/products')
-    // dispatch(gotAllProducts(data))
   } catch (error) {
     console.error(error)
   }
@@ -37,8 +37,8 @@ export const fetchBugs = () => async dispatch => {
 
 export const fetchSingleBug = id => async dispatch => {
   try {
-    // const {data} = await axios.get(`/api/products/${id}`)
-    // dispatch(gotSingleProduct(data))
+    const {data} = await axios.get(`https://acnhapi.com/v1/bugs/${id}`)
+    dispatch(gotSingleBug(data))
   } catch (error) {
     console(error)
   }

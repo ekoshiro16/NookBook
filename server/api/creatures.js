@@ -15,7 +15,7 @@ router.get('/:id', async (req, res, next) => {
   }
 })
 
-//display all creatures
+//display all creatures directory page
 router.get('/', async (req, res, next) => {
   try {
     const creatures = await Creature.findAll()

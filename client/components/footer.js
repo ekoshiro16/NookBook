@@ -16,7 +16,6 @@ export const Footer = () => {
               <p className="grey-text text-lighten-4">
                 Customer Service - customercare@nookbook.com
               </p>
-              <p>made with love, coffee, and pain by Elle</p>
             </div>
             <div className="col l4 offset-l2 s12">
               <h5 className="white-text">CUSTOMER SERVICE</h5>

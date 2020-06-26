@@ -1,13 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-export class AllFish extends React.Component {
+class AllFish extends React.Component {
   render() {
     return (
       <div className="container">
         <div className="row">
           <p className="flow-text">Fish A-Z</p>
-          <div id="all-fish-view" />
+          {/* <div id="all-fish-view" /> */}
         </div>
       </div>
     )
@@ -48,3 +48,5 @@ export class AllFish extends React.Component {
 //     );
 //   }
 // }
+
+export default AllFish

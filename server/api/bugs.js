@@ -4,9 +4,9 @@ const {Bug} = require('../db/models')
 // displays all bugs directory page
 router.get('/', async (req, res, next) => {
   try {
-    const bug = await Bug.findAll()
-    if (bug) {
-      res.status(200).json(bug)
+    const bugs = await Bug.findAll()
+    if (bugs) {
+      res.status(200).json(bugs)
     } else {
       res.sendStatus(404)
     }

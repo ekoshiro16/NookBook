@@ -5,7 +5,6 @@ import {runInNewContext} from 'vm'
 // ACTION CREATORS
 const GOT_ALL_BUGS = 'GOT_ALL_BUGS'
 const GOT_SINGLE_BUG = 'GOT_SINGLE_BUG'
-const GOT_ICONS = 'GOT_ICONS'
 
 const initialState = {
   allBugs: [],

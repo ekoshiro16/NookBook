@@ -2352,6 +2352,8 @@ audio:not([controls]) {
  */
 img {
   border-style: none;
+  max-height: 100%;
+  height: auto;
 }
 
 /**
@@ -3515,9 +3517,12 @@ table span.badge {
 }
 
 .row {
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100;
 }
 
 .row:after {
@@ -3540,7 +3545,7 @@ table span.badge {
 }
 
 .row .col.s1 {
-  width: 8.3333333333%;
+  width: 6.25%;
   margin-left: auto;
   left: auto;
   right: auto;

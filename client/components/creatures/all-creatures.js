@@ -33,9 +33,9 @@ export class AllCreatures extends React.Component {
                   <a href="/creatures/fish">
                     <img
                       src="https://dodo.ac/np/images/4/4b/Black_Bass_NH.png"
-                      className="responsive-img"
-                      height="400px"
-                      width="400px"
+                      className="img"
+                      height="300px"
+                      width="300px"
                       float="left"
                       object-fit="cover"
                     />
@@ -54,9 +54,9 @@ export class AllCreatures extends React.Component {
                   <a href="/creatures/bugs">
                     <img
                       src="https://dodo.ac/np/images/thumb/f/f1/Emperor_Butterfly_NH.png/180px-Emperor_Butterfly_NH.png"
-                      className="responsive-img"
-                      height="400px"
-                      width="400px"
+                      className="img"
+                      height="300px"
+                      width="300px"
                       float="left"
                       object-fit="cover"
                     />

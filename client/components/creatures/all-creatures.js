@@ -66,10 +66,10 @@ export class AllCreatures extends React.Component {
             </div>
           </div>
         </Route>
-        <Route exact path="/creatures/fish">
+        <Route path="/creatures/fish">
           <AllFish />
         </Route>
-        <Route exact path="/creatures/bugs">
+        <Route path="/creatures/bugs">
           <AllBugs />
         </Route>
       </Switch>

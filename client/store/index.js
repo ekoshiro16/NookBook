@@ -3,9 +3,10 @@ import {createLogger} from 'redux-logger'
 import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import bugReducer from './bug'
+import fishReducer from './fish'
 import user from './user'
 
-const reducer = combineReducers({user, bugReducer})
+const reducer = combineReducers({user, bugReducer, fishReducer})
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
 )

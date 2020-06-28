@@ -5,8 +5,10 @@ import PropTypes from 'prop-types'
 import {Login, Signup, UserHome} from './components'
 import {me} from './store'
 import {AllCreatures} from './components/creatures/all-creatures'
+// import {IslandCreator} from './components/island-creator'
 import {AllBugs} from './components/creatures/all-bugs'
 import {AllFish} from './components/creatures/all-fish'
+import IslandCreator from './components/island-creator'
 
 /**
  * COMPONENT
@@ -25,6 +27,7 @@ class Routes extends Component {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/creatures" component={AllCreatures} />
+        <Route path="/island-creator" component={IslandCreator} />
         {/* <Route path="/creatures/bugs" component={AllBugs} /> */}
 
         {isLoggedIn && (

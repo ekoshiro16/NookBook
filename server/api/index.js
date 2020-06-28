@@ -6,6 +6,7 @@ router.use('/creatures/fish', require('./fish'))
 router.use('/creatures/fish/:id', require('./fish'))
 router.use('/creatures/bugs', require('./bugs'))
 router.use('/creatures/bugs/:id', require('./bugs'))
+router.use('/island-creator', require('./island-creator'))
 
 router.use((req, res, next) => {
   const error = new Error('Not Found')

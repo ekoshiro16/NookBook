@@ -22,7 +22,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
                 <a href="/exclusive">✨Premium Members</a>
               </li>
               <li>
-                <a href="/about">📙 About Us</a>
+                <a href="/island-creator">📙 Island Creator</a>
               </li>
             </ul>
             <ul className="right hide-on-med-and-down">
@@ -53,7 +53,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
                 <a href="/creatures">🛍Creatures</a>
               </li>
               <li>
-                <a href="/about">📙 About Us</a>
+                <a href="/island-creator">📙 Island Creator</a>
               </li>
             </ul>
             <ul className="right hide-on-med-and-down">

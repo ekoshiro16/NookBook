@@ -1,52 +1,58 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {fetchFish} from '../../store/fish'
+import {Route, Switch, Link} from 'react-router-dom'
+import SingleFish from './single-fish'
 
-class AllFish extends React.Component {
+export class AllFish extends React.Component {
+  componentDidMount() {
+    this.props.getFish()
+  }
+
   render() {
+    console.log(this.props)
+    const fishy = Object.entries(this.props.fish)
+
     return (
-      <div className="container">
-        <div className="row">
-          <p className="flow-text">Fish A-Z</p>
-          {/* <div id="all-fish-view" /> */}
-        </div>
-      </div>
+      <Switch>
+        <Route exact path="/creatures/fish">
+          <div className="container">
+            <div className="row">
+              <p className="flow-text">Fish (Critterpedia View)</p>
+            </div>
+            <div className="row">
+              {fishy
+                ? fishy.map(([key, fish]) => {
+                    return (
+                      <div className="col s1" key={fish.id}>
+                        <a href={`/creatures/fish/${fish.id}`}>
+                          <img src={fish.icon_uri} className="responsive-img" />
+                        </a>
+                      </div>
+                    )
+                  })
+                : 'LOADING...'}
+            </div>
+          </div>
+        </Route>
+        <Route path="/creatures/fish/:id">
+          <SingleFish />
+        </Route>
+      </Switch>
     )
   }
 }
 
-//       <div className="container">
-//       <div className="row">
-//         <p className="flow-text">Look at all this in-game awesomeness you could own!</p>
-//         <div id="all-products-view">
-//           {products && products.length > 0
-//             ? products.map((product) => {
-//                 return (
-//                   <div className="col s3" key={product.id}>
-//                     <div className="card hoverable">
-//                     <div className="card-image">
-//                     <a href={`/products/${product.id}`}><img src={product.imageURL} className="responsive-img" height="50%" /></a>
-//           <a className="btn-floating pulse halfway-fab waves-effect waves-light"><i className="material-icons">add_shopping_cart</i></a>
-//           </div>
-//           <div className="card-content">
-//           <span className="card-title">{product.name}</span>
-//           <p>Price: {product.price}</p>
-//           <p>{`${product.description.slice(0, 28)}...`}</p>
-//         </div>
-//         <div className="card-action">
-//                 <a href={`/products/${product.id}`}>{`LEARN MORE ABOUT ${product.name}`}</a>
-//         </div>
-//                     </div>
-//                   </div>
-//                 );
-//               })
-//             : 'LOADING...'}
-//         </div>
+const mapState = state => {
+  return {
+    fish: state.fishReducer.allFish
+  }
+}
 
-//       </div>
+const mapDispatch = dispatch => {
+  return {
+    getFish: () => dispatch(fetchFish())
+  }
+}
 
-//       </div>
-//     );
-//   }
-// }
-
-export default AllFish
+export default connect(mapState, mapDispatch)(AllFish)

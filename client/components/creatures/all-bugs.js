@@ -10,9 +10,9 @@ export class AllBugs extends React.Component {
   }
 
   render() {
-    const bugs = this.props.bugs
-    const bugsArr = Object.entries(this.props.bugs)
-    console.log(SingleBug)
+    console.log(this.props)
+    const bugs = Object.entries(this.props.bugs)
+
     return (
       <Switch>
         <Route exact path="/creatures/bugs">
@@ -21,8 +21,8 @@ export class AllBugs extends React.Component {
               <p className="flow-text">Bugs (Critterpedia View)</p>
             </div>
             <div className="row">
-              {bugsArr
-                ? bugsArr.map(([key, bug]) => {
+              {bugs
+                ? bugs.map(([key, bug]) => {
                     return (
                       <div className="col s1" key={bug.id}>
                         <a href={`/creatures/bugs/${bug.id}`}>

@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import {fetchSongs} from '../../store/song'
 import {connect} from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
+import SingleSong from './single-song'
 
 export class AllSongs extends React.Component {
   componentDidMount() {
@@ -41,9 +42,7 @@ export class AllSongs extends React.Component {
         </Route>
 
         <Route path="/music/kk-songs/:id">
-          <div>
-            <p>hello world!</p>
-          </div>
+          <SingleSong />
         </Route>
       </Switch>
     )

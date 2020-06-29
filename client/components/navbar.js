@@ -16,16 +16,16 @@ const Navbar = ({handleClick, isLoggedIn}) => (
             </a>
             <ul className="left hide-on-med-and-down">
               <li>
-                <a href="/creatures">🛍 Creatures</a>
+                <a href="/creatures">🐙 Creatures</a>
               </li>
               <li>
                 <a href="/exclusive">✨Premium Members</a>
               </li>
               <li>
-                <a href="/island-creator">📙 Island Creator</a>
+                <a href="/island-creator">🏝️ Island Creator</a>
               </li>
               <li>
-                <a href="/music">📙 Music</a>
+                <a href="/music">🎶 Music</a>
               </li>
             </ul>
             <ul className="right hide-on-med-and-down">
@@ -53,13 +53,13 @@ const Navbar = ({handleClick, isLoggedIn}) => (
             </a>
             <ul className="left hide-on-med-and-down">
               <li>
-                <a href="/creatures">🛍Creatures</a>
+                <a href="/creatures">🐙 Creatures</a>
               </li>
               <li>
-                <a href="/island-creator">📙 Island Creator</a>
+                <a href="/island-creator">🏝️️ Island Creator</a>
               </li>
               <li>
-                <a href="/music">📙 Music</a>
+                <a href="/music">🎶 Music</a>
               </li>
             </ul>
             <ul className="right hide-on-med-and-down">

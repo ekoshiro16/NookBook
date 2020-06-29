@@ -37,7 +37,7 @@ export const fetchSingleFossil = id => async dispatch => {
     const {data} = await axios.get(`https://acnhapi.com/v1/fossils/${id}`)
     dispatch(gotSingleFossil(data))
   } catch (error) {
-    console(error)
+    console.error(error)
   }
 }
 

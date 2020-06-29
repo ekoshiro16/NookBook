@@ -15,6 +15,11 @@ const Navbar = ({handleClick, isLoggedIn}) => (
               🌱 NookBook 🌱
             </a>
 
+            <form>
+              <label htmlFor="search">Search by name: </label>
+              <input type="text" />
+            </form>
+
             <ul className="left hide-on-med-and-down">
               <li>
                 <a href="/creatures">🐙 Creatures</a>
@@ -26,13 +31,34 @@ const Navbar = ({handleClick, isLoggedIn}) => (
                 <a href="/exclusive">✨Premium Members</a>
               </li>
               <li>
-                <a href="/island-creator">🏝️ Island Creator</a>
-              </li>
-              <li>
                 <a href="/music">🎶 Music</a>
               </li>
               <li>
                 <a href="/villagers">🦥 Villagers</a>
+              </li>
+              <li>
+                <a href="/art">🎨 Art</a>
+              </li>
+              <li>
+                <a href="furniture">🛏️ Furniture</a>
+              </li>
+              <li>
+                <a href="fashion">👗 Fashion</a>
+              </li>
+              <li>
+                <a href="guides">📝 User Guides</a>
+              </li>
+              <li>
+                <a href="/island-creator">🏝️ Island Creator</a>
+              </li>
+              <li>
+                <a href="turnip-calculator">🧄 Turnip Calculator</a>
+              </li>
+              <li>
+                <a href="user-submissions">👥 Submissions</a>
+              </li>
+              <li>
+                <a href="forums">🗣️ Forums</a>
               </li>
             </ul>
             <ul className="right hide-on-med-and-down">
@@ -69,13 +95,34 @@ const Navbar = ({handleClick, isLoggedIn}) => (
                 <a href="/fossils">🦕 Fossils</a>
               </li>
               <li>
-                <a href="/island-creator">️🏝️ Island Creator</a>
-              </li>
-              <li>
                 <a href="/music">🎶 Music</a>
               </li>
               <li>
                 <a href="/villagers">🦥 Villagers</a>
+              </li>
+              <li>
+                <a href="/art">🎨 Art</a>
+              </li>
+              <li>
+                <a href="furniture">🛏️ Furniture</a>
+              </li>
+              <li>
+                <a href="fashion">👗 Fashion</a>
+              </li>
+              <li>
+                <a href="guides">📝 Guides</a>
+              </li>
+              <li>
+                <a href="/island-creator">️🏝️ Island Creator</a>
+              </li>
+              <li>
+                <a href="turnip-calculator">🧄 Turnip Calculator</a>
+              </li>
+              <li>
+                <a href="user-submissions">👥 Submissions</a>
+              </li>
+              <li>
+                <a href="forums">🗣️ Forums</a>
               </li>
             </ul>
             <ul className="right hide-on-med-and-down">

@@ -61,7 +61,6 @@ export class AllMusic extends React.Component {
               </div>
             </div>
           </div>
-          {/* </div> */}
         </Route>
         <Route path="/music/kk-songs">
           <AllSongs />

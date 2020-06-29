@@ -12,6 +12,7 @@ export class AllSongs extends React.Component {
 
   render() {
     console.log(this.props)
+    console.log('this', this)
 
     const songs = Object.entries(this.props.songs)
     return (

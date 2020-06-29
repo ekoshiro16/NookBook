@@ -2,16 +2,19 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchFossils} from '../store/fossil'
 import {Route, Switch, Link} from 'react-router-dom'
-// import SingleFossil from './single-fossil'
+import SingleFossil from './single-fossil'
+import {withRouter} from 'react-router'
 
 export class AllFossils extends React.Component {
-  // componentDidMount() {
-  //     this.props.getFossils()
-  // }
+  constructor(props) {
+    super(props)
+  }
+  componentDidMount() {
+    // this.props.getFossils()
+  }
 
   render() {
     console.log('props', this.props)
-    console.log('this', this)
 
     // const fossils = Object.entries(this.props.fossils)
 
@@ -46,6 +49,9 @@ export class AllFossils extends React.Component {
                         </div> */}
           </div>
         </Route>
+        <Route>
+          <SingleFossil />
+        </Route>
       </Switch>
     )
   }
@@ -63,4 +69,4 @@ const mapDispatch = dispatch => {
   }
 }
 
-export default connect(mapState, mapDispatch)(AllFossils)
+export default withRouter(connect(mapState, mapDispatch)(AllFossils))

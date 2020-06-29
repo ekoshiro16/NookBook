@@ -5,7 +5,8 @@ import {Route, Switch} from 'react-router-dom'
 
 export class AllVillagers extends React.Component {
   render() {
-    console.log(this.props)
+    console.log('props', this.props)
+    console.log('this', this)
     return (
       <Switch>
         <Route exact path="/villagers">

@@ -6,11 +6,11 @@ import SingleFossil from './single-fossil'
 import {withRouter} from 'react-router'
 
 export class AllFossils extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
   componentDidMount() {
-    // this.props.getFossils()
+    this.props.getFossils()
   }
 
   render() {
@@ -59,7 +59,7 @@ export class AllFossils extends React.Component {
 
 const mapState = state => {
   return {
-    fossils: state.fossilReducer.AllFossils
+    fossils: state.fossilReducer.allFossils
   }
 }
 

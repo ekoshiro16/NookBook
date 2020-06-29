@@ -26,7 +26,7 @@ export class AllVillagers extends React.Component {
 
 const mapState = state => {
   return {
-    villagers: state.villagerReducer.AllVillagers
+    villagers: state.villagerReducer.allVillagers
   }
 }
 

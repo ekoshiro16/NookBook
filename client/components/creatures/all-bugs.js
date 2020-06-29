@@ -24,7 +24,11 @@ export class AllBugs extends React.Component {
               {bugs
                 ? bugs.map(([key, bug]) => {
                     return (
-                      <div className="col s1" key={bug.id}>
+                      <div className="col s2" key={bug.id}>
+                        <div className="stylized-title">
+                          {bug.id}: {bug && bug.name && bug.name['name-USen']}
+                        </div>
+
                         <a href={`/creatures/bugs/${bug.id}`}>
                           <img src={bug.icon_uri} className="responsive-img" />
                         </a>

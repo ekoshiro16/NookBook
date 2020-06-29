@@ -24,8 +24,17 @@ export class AllFish extends React.Component {
               {fishy
                 ? fishy.map(([key, fish]) => {
                     return (
-                      <div className="col s1" key={fish.id}>
-                        <a href={`/creatures/fish/${fish.id}`}>
+                      <div className="col s2" key={fish.id}>
+                        <div className="stylized-title">
+                          {fish.id}:{' '}
+                          {fish && fish.name && fish.name['name-USen']}
+                        </div>
+                        <br />
+
+                        <a
+                          href={`/creatures/fish/${fish.id}`}
+                          title={fish && fish.name && fish.name['name-USen']}
+                        >
                           <img src={fish.icon_uri} className="responsive-img" />
                         </a>
                       </div>

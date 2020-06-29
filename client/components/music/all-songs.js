@@ -11,7 +11,7 @@ export class AllSongs extends React.Component {
   }
 
   render() {
-    console.log(this.props)
+    console.log('props', this.props)
     console.log('this', this)
 
     const songs = Object.entries(this.props.songs)
@@ -27,7 +27,7 @@ export class AllSongs extends React.Component {
                 ? songs.map(([key, song]) => {
                     return (
                       <div className="col s3" key={song.id}>
-                        <div className="stylixed-title">
+                        <div className="song-title">
                           {song.id}:{' '}
                           {song && song.name && song.name['name-USen']}
                         </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import AllSongs from './all-songs'
+import AllBGMS from './all-bgms'
 import {Route, Switch} from 'react-router-dom'
 
 export class AllMusic extends React.Component {
@@ -17,7 +18,7 @@ export class AllMusic extends React.Component {
               </p>
             </div>
 
-            <div className="allCreaturesView">
+            <div className="all-critters-view">
               <div className="fishView">
                 <div className="fishTitle">
                   <Link to="/music/kk-songs">
@@ -37,12 +38,35 @@ export class AllMusic extends React.Component {
                   </a>
                 </div>
               </div>
+
+              <div className="fishView">
+                <div className="fishTitle">
+                  <Link to="/music/background-music">
+                    <p>All Animal Crossing Background Music</p>
+                  </Link>
+                </div>
+                <div className="fishImg">
+                  <a href="/music/background-music">
+                    <img
+                      src="https://ih1.redbubble.net/image.1037321112.8250/st,small,507x507-pad,600x600,f8f8f8.jpg"
+                      className="img"
+                      height="300px"
+                      width="300px"
+                      float="left"
+                      object-fit="cover"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           {/* </div> */}
         </Route>
         <Route path="/music/kk-songs">
           <AllSongs />
+        </Route>
+        <Route path="/music/background-music">
+          <AllBGMS />
         </Route>
       </Switch>
     )

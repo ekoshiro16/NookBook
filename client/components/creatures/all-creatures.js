@@ -21,7 +21,7 @@ export class AllCreatures extends React.Component {
               </p>
             </div>
 
-            <div className="allCreaturesView">
+            <div className="all-critters-view">
               {/* Fish View */}
               <div className="fishView">
                 <div className="fishTitle">
@@ -32,7 +32,7 @@ export class AllCreatures extends React.Component {
                 <div className="fishImg">
                   <a href="/creatures/fish">
                     <img
-                      src="https://dodo.ac/np/images/4/4b/Black_Bass_NH.png"
+                      src="https://www.clipartmax.com/png/full/99-992431_r%C3%A9sultats-de-recherche-dimages-pour-%C2%AB-otter-chibi-cartoon-sea-otter-drawing.png"
                       className="img"
                       height="300px"
                       width="300px"
@@ -53,7 +53,7 @@ export class AllCreatures extends React.Component {
                 <div className="bugImg">
                   <a href="/creatures/bugs">
                     <img
-                      src="https://dodo.ac/np/images/thumb/f/f1/Emperor_Butterfly_NH.png/180px-Emperor_Butterfly_NH.png"
+                      src="https://st2.depositphotos.com/2172759/11751/v/950/depositphotos_117512208-stock-illustration-cute-cartoon-bug-isolated-on.jpg"
                       className="img"
                       height="300px"
                       width="300px"

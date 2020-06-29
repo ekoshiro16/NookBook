@@ -9,6 +9,9 @@ router.use('/creatures/bugs/:id', require('./bugs'))
 router.use('/island-creator', require('./island-creator'))
 router.use('/music', require('./music'))
 router.use('/music/kk-songs', require('./songs'))
+router.use('/music/kk-songs/:id', require('./songs'))
+router.use('/music/background-music', require('./bgms'))
+router.use('/music/background-music/:id', require('./bgms'))
 
 router.use((req, res, next) => {
   const error = new Error('Not Found')

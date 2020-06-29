@@ -5,6 +5,13 @@
  */
 .login-form-container {
   background-color: #f7fff7;
+  line-height: 1.5;
+}
+
+.all-critters-view {
+  /* box-sizing: border-box; */
+  display: inline-flex;
+  flex: 0 0 50%;
 }
 
 .island-td {
@@ -4645,6 +4652,10 @@ nav {
   line-height: 56px;
 }
 
+nav.secondary-navbar {
+  opacity: 80%;
+}
+
 nav.nav-extended {
   height: auto;
 }
@@ -4879,7 +4890,7 @@ a {
 }
 
 html {
-  line-height: 1.5;
+  line-height: 4;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   font-weight: normal;

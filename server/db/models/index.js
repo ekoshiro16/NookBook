@@ -2,6 +2,7 @@ const User = require('./user')
 const Bug = require('./bug')
 const Fish = require('./fish')
 const Song = require('./song')
+const BGM = require('./bgm')
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -20,5 +21,6 @@ module.exports = {
   User,
   Bug,
   Fish,
-  Song
+  Song,
+  BGM
 }

@@ -20,7 +20,6 @@ export class AllSongs extends React.Component {
     return (
       <Switch>
         <Route exact path="/music/kk-songs">
-          <div>hi</div>
           <div className="container">
             <div className="row">
               <p className="flow-text">All K.K. Slider Songs</p>
@@ -29,10 +28,24 @@ export class AllSongs extends React.Component {
               {songs
                 ? songs.map(([key, song]) => {
                     return (
-                      <div className="col s2" key={song.id}>
-                        <a href={`/music/kk-songs/${song.id}`}>
+                      <div className="col s3" key={song.id}>
+                        <div className="stylixed-title">
+                          {song.id}:{' '}
+                          {song && song.name && song.name['name-USen']}
+                        </div>
+
+                        <a
+                          href={`/music/kk-songs/${song.id}`}
+                          title={song && song.name && song.name['name-USen']}
+                        >
                           <img src={song.image_uri} className="music-img" />
                         </a>
+
+                        <audio
+                          controls
+                          src={song.music_uri}
+                          type="audio/mpeg"
+                        />
                       </div>
                     )
                   })

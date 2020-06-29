@@ -25,7 +25,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
                 <a href="/island-creator">🏝️ Island Creator</a>
               </li>
               <li>
-                <a href="/music">🎶 Music</a>
+                <a href="/music">📙 Music</a>
               </li>
             </ul>
             <ul className="right hide-on-med-and-down">
@@ -51,12 +51,14 @@ const Navbar = ({handleClick, isLoggedIn}) => (
             <a href="/home" className="brand-logo center">
               🌱 NookBook 🌱
             </a>
+          </div>
+          <nav className="secondary-navbar">
             <ul className="left hide-on-med-and-down">
               <li>
                 <a href="/creatures">🐙 Creatures</a>
               </li>
               <li>
-                <a href="/island-creator">🏝️️ Island Creator</a>
+                <a href="/island-creator">️🏝️ Island Creator</a>
               </li>
               <li>
                 <a href="/music">🎶 Music</a>
@@ -70,7 +72,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
                 <a href="/signup">👋 Sign Up</a>
               </li>
             </ul>
-          </div>
+          </nav>
         </nav>
       </div>
     )}

@@ -16,10 +16,8 @@ export class SingleSong extends React.Component {
 
   render() {
     const song = this.props.song
-    console.log('songggggg', song)
-    if (song.name) {
-      console.log('song name', song.name['name-USen'])
-    }
+    console.log(song)
+    console.log(song.music_uri)
     return (
       <div>
         <div className="row">
@@ -44,6 +42,31 @@ export class SingleSong extends React.Component {
                   <div className="stylized-text-content">
                     {song['buy-price']}
                   </div>
+                </div>
+
+                <div className="smaller-info-container">
+                  <div className="stylized-title">Sell Price: </div>
+                  <div className="stylized-text-content">
+                    {song['sell-price']}
+                  </div>
+                </div>
+              </div>
+
+              <div className="larger-info-container">
+                <div className="smaller-info-container">
+                  <div className="stylized-title">
+                    Available via Nook Catalog?
+                  </div>
+                  <div className="stylized-text-content">
+                    {song.isOrderable ? 'Yes' : 'No'}
+                  </div>
+                </div>
+              </div>
+
+              <div className="larger-info-container">
+                <div className="smaller-info-container">
+                  <div className="stylized-title">Listen here: </div>
+                  <audio controls src={song.music_uri} type="audio/mpeg" />
                 </div>
               </div>
             </div>

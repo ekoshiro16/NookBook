@@ -65,6 +65,9 @@ export default class IslandCreator extends React.Component {
         <table className="island-grid">
           <tbody />
         </table>
+        <div>
+          <h1>UNDER CONSTRUCTION </h1>
+        </div>
       </div>
     )
   }

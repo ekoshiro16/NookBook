@@ -24,6 +24,9 @@ const Navbar = ({handleClick, isLoggedIn}) => (
               <li>
                 <a href="/island-creator">📙 Island Creator</a>
               </li>
+              <li>
+                <a href="/music">📙 Music</a>
+              </li>
             </ul>
             <ul className="right hide-on-med-and-down">
               <li>
@@ -54,6 +57,9 @@ const Navbar = ({handleClick, isLoggedIn}) => (
               </li>
               <li>
                 <a href="/island-creator">📙 Island Creator</a>
+              </li>
+              <li>
+                <a href="/music">📙 Music</a>
               </li>
             </ul>
             <ul className="right hide-on-med-and-down">

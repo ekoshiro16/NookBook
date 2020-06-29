@@ -1,5 +1,8 @@
 const User = require('./user')
 const Bug = require('./bug')
+const Fish = require('./fish')
+const Song = require('./song')
+
 /**
  * If we had any associations to make, this would be a great place to put them!
  * ex. if we had another model called BlogPost, we might say:
@@ -15,5 +18,7 @@ const Bug = require('./bug')
  */
 module.exports = {
   User,
-  Bug
+  Bug,
+  Fish,
+  Song
 }

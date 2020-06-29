@@ -8,6 +8,8 @@ import {AllCreatures} from './components/creatures/all-creatures'
 // import {IslandCreator} from './components/island-creator'
 import {AllBugs} from './components/creatures/all-bugs'
 import {AllFish} from './components/creatures/all-fish'
+import {AllMusic} from './components/music/all-music'
+import {AllSongs} from './components/music/all-songs'
 import IslandCreator from './components/island-creator'
 
 /**
@@ -28,7 +30,7 @@ class Routes extends Component {
         <Route path="/signup" component={Signup} />
         <Route path="/creatures" component={AllCreatures} />
         <Route path="/island-creator" component={IslandCreator} />
-        {/* <Route path="/creatures/bugs" component={AllBugs} /> */}
+        <Route path="/music" component={AllMusic} />
 
         {isLoggedIn && (
           <Switch>

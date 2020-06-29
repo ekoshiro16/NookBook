@@ -79,7 +79,7 @@ export class AllCreatures extends React.Component {
 
 const mapState = state => {
   return {
-    products: state.productReducer.AllCreatures
+    creatures: state.productReducer.AllCreatures
   }
 }
 

@@ -23,8 +23,6 @@ export const gotSingleBug = bug => ({
 })
 
 // THUNK CREATORS
-
-// [ ] To-do, trycatch all thunks
 export const fetchBugs = () => async dispatch => {
   try {
     const {data} = await axios.get('https://acnhapi.com/v1/bugs')

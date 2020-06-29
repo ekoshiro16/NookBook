@@ -32,7 +32,7 @@ export const fetchSongs = () => async dispatch => {
   }
 }
 
-export const fetchSingleSOng = id => async dispatch => {
+export const fetchSingleSong = id => async dispatch => {
   try {
     const {data} = await axios.get(`https://acnhapi.com/v1/songs/${id}`)
     dispatch(gotSingleSong(data))

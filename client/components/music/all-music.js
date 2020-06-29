@@ -7,6 +7,7 @@ import {Route, Switch} from 'react-router-dom'
 
 export class AllMusic extends React.Component {
   render() {
+    console.log(this.props)
     return (
       <Switch>
         <Route exact path="/music">

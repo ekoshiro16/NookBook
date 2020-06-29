@@ -3,6 +3,8 @@ const Bug = require('./bug')
 const Fish = require('./fish')
 const Song = require('./song')
 const BGM = require('./bgm')
+const Fossil = require('./fossil')
+const Villager = require('./villager')
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -22,5 +24,7 @@ module.exports = {
   Bug,
   Fish,
   Song,
-  BGM
+  BGM,
+  Fossil,
+  Villager
 }

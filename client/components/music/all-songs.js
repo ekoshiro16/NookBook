@@ -7,13 +7,10 @@ import SingleSong from './single-song'
 
 export class AllSongs extends React.Component {
   componentDidMount() {
-    console.log('blah')
     this.props.getSongs()
   }
 
   render() {
-    // const songs = this.props
-    // console.log(songs)
     console.log(this.props)
 
     const songs = Object.entries(this.props.songs)

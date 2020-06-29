@@ -6,6 +6,8 @@ import bugReducer from './bug'
 import fishReducer from './fish'
 import songReducer from './song'
 import bgmReducer from './bgm'
+import fossilReducer from './fossil'
+import villagerReducer from './villager'
 import user from './user'
 
 const reducer = combineReducers({
@@ -13,7 +15,9 @@ const reducer = combineReducers({
   bugReducer,
   fishReducer,
   songReducer,
-  bgmReducer
+  bgmReducer,
+  fossilReducer,
+  villagerReducer
 })
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))

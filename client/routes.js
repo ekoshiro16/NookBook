@@ -10,6 +10,8 @@ import {AllBugs} from './components/creatures/all-bugs'
 import {AllFish} from './components/creatures/all-fish'
 import {AllMusic} from './components/music/all-music'
 import {AllSongs} from './components/music/all-songs'
+import {AllFossils} from './components/all-fossils'
+import {AllVillagers} from './components/villagers/all-villagers'
 import IslandCreator from './components/island-creator'
 
 /**
@@ -31,6 +33,8 @@ class Routes extends Component {
         <Route path="/creatures" component={AllCreatures} />
         <Route path="/island-creator" component={IslandCreator} />
         <Route path="/music" component={AllMusic} />
+        <Route path="/fossils" component={AllFossils} />
+        <Route path="/villagers" component={AllVillagers} />
 
         {isLoggedIn && (
           <Switch>

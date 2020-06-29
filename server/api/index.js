@@ -12,6 +12,10 @@ router.use('/music/kk-songs', require('./songs'))
 router.use('/music/kk-songs/:id', require('./songs'))
 router.use('/music/background-music', require('./bgms'))
 router.use('/music/background-music/:id', require('./bgms'))
+router.use('/fossils', require('./fossils'))
+router.use('/fossils/:id', require('./fossils'))
+router.use('/villagers', require('./villager'))
+router.use('/villagers/:id', require('./villager'))
 
 router.use((req, res, next) => {
   const error = new Error('Not Found')

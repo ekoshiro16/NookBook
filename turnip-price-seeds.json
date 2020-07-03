@@ -1,34 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 600,
-  "height": 200,
-  "mark": {"type": "bar", "tooltip": true},
-  "transform": [
-    {"bin": {"step": 5}, "field": "price", "as": "binnedPrice"},
-    {
-      "aggregate": [{"op": "sum", "field": "frequency", "as": "count"}],
-      "groupby": ["binnedPrice", "binnedPrice_end"]
-    },
-    {"joinaggregate": [{"op": "sum", "field": "count", "as": "totalCount"}]},
-    {"calculate": "datum.count / datum.totalCount", "as": "percentage"}
-  ],
-  "title": "Weekly Highest Price of Turnips Histogram",
-  "encoding": {
-    "x": {
-      "title": "Price",
-      "field": "binnedPrice",
-      "type": "quantitative",
-      "bin": {"binned": true}
-    },
-    "x2": {"field": "binnedPrice_end"},
-    "y": {
-      "title": "Probability",
-      "field": "percentage",
-      "type": "quantitative",
-      "axis": {"format": ".1~%"}
-    }
-  },
-  "data": {
+  "turnip-data": {
     "values": [
       {"price": 0, "frequency": 0},
       {"price": 1, "frequency": 0},

@@ -5,12 +5,13 @@ import AllFish from './all-fish'
 import AllBugs from './all-bugs'
 import {Route, Switch} from 'react-router-dom'
 
-export class AllCreatures extends React.Component {
+class AllCreatures extends React.Component {
   // componentDidMount() {
   //   this.props.getCreatures()
   // }
 
   render() {
+    console.log(this.props)
     return (
       <Switch>
         <Route exact path="/creatures">
@@ -77,16 +78,4 @@ export class AllCreatures extends React.Component {
   }
 }
 
-const mapState = state => {
-  return {
-    creatures: state.productReducer.AllCreatures
-  }
-}
-
-const mapDispatch = dispatch => {
-  return {
-    getCreatures: () => dispatch(fetchCreatures())
-  }
-}
-
-export default connect(mapState, mapDispatch)(AllCreatures)
+export default AllCreatures
